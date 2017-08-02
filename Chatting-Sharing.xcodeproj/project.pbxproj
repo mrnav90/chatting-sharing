@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE3FE4561F31FAD9003E5991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4551F31FAD9003E5991 /* AppDelegate.swift */; };
-		FE3FE4581F31FAD9003E5991 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4571F31FAD9003E5991 /* ViewController.swift */; };
-		FE3FE45B1F31FAD9003E5991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3FE4591F31FAD9003E5991 /* Main.storyboard */; };
-		FE3FE45E1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE45C1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodeld */; };
 		FE3FE4601F31FAD9003E5991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3FE45F1F31FAD9003E5991 /* Assets.xcassets */; };
-		FE3FE4631F31FAD9003E5991 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3FE4611F31FAD9003E5991 /* LaunchScreen.storyboard */; };
 		FE3FE46E1F31FAD9003E5991 /* Chatting_SharingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE46D1F31FAD9003E5991 /* Chatting_SharingTests.swift */; };
 		FE3FE4791F31FAD9003E5991 /* Chatting_SharingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4781F31FAD9003E5991 /* Chatting_SharingUITests.swift */; };
+		FE3FE4A71F31FC7B003E5991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE49B1F31FC7B003E5991 /* AppDelegate.swift */; };
+		FE3FE4A81F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4A01F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld */; };
+		FE3FE4A91F31FC7B003E5991 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE3FE4A31F31FC7B003E5991 /* Info.plist */; };
+		FE3FE4AC1F31FD54003E5991 /* NearbyUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4AB1F31FD54003E5991 /* NearbyUsersVC.swift */; };
+		FE3FE4B11F3200FA003E5991 /* Hype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3FE4AE1F3200DB003E5991 /* Hype.framework */; };
+		FE3FE4B21F3200FA003E5991 /* Hype.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE3FE4AE1F3200DB003E5991 /* Hype.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE3FE4B51F320118003E5991 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3FE4B41F320118003E5991 /* UIKit.framework */; };
+		FE3FE4B81F320494003E5991 /* ChatApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4B71F320494003E5991 /* ChatApplication.swift */; };
+		FE3FE4BA1F3207F4003E5991 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4B91F3207F4003E5991 /* MessageItem.swift */; };
+		FE3FE4BC1F320B8B003E5991 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4BB1F320B8B003E5991 /* UserObject.swift */; };
+		FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */; };
+		FE3FE4C71F323D52003E5991 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,21 +41,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FE3FE4B31F3200FA003E5991 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE3FE4B21F3200FA003E5991 /* Hype.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		FE3FE4521F31FAD9003E5991 /* Chatting-Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chatting-Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE3FE4551F31FAD9003E5991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE3FE4571F31FAD9003E5991 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FE3FE45A1F31FAD9003E5991 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE3FE45D1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chatting_Sharing.xcdatamodel; sourceTree = "<group>"; };
 		FE3FE45F1F31FAD9003E5991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE3FE4621F31FAD9003E5991 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FE3FE4641F31FAD9003E5991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3FE4691F31FAD9003E5991 /* Chatting-SharingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chatting-SharingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3FE46D1F31FAD9003E5991 /* Chatting_SharingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatting_SharingTests.swift; sourceTree = "<group>"; };
 		FE3FE46F1F31FAD9003E5991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3FE4741F31FAD9003E5991 /* Chatting-SharingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chatting-SharingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3FE4781F31FAD9003E5991 /* Chatting_SharingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatting_SharingUITests.swift; sourceTree = "<group>"; };
 		FE3FE47A1F31FAD9003E5991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3FE49B1F31FC7B003E5991 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE3FE4A11F31FC7B003E5991 /* Chatting_Sharing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chatting_Sharing.xcdatamodel; sourceTree = "<group>"; };
+		FE3FE4A31F31FC7B003E5991 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3FE4AB1F31FD54003E5991 /* NearbyUsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyUsersVC.swift; sourceTree = "<group>"; };
+		FE3FE4AE1F3200DB003E5991 /* Hype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hype.framework; sourceTree = "<group>"; };
+		FE3FE4B41F320118003E5991 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE3FE4B71F320494003E5991 /* ChatApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatApplication.swift; sourceTree = "<group>"; };
+		FE3FE4B91F3207F4003E5991 /* MessageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
+		FE3FE4BB1F320B8B003E5991 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyUserCell.swift; sourceTree = "<group>"; };
+		FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3FE4B51F320118003E5991 /* UIKit.framework in Frameworks */,
+				FE3FE4B11F3200FA003E5991 /* Hype.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +107,7 @@
 		FE3FE4491F31FAD9003E5991 = {
 			isa = PBXGroup;
 			children = (
+				FE3FE4B01F3200E7003E5991 /* Frameworks */,
 				FE3FE4541F31FAD9003E5991 /* Chatting-Sharing */,
 				FE3FE46C1F31FAD9003E5991 /* Chatting-SharingTests */,
 				FE3FE4771F31FAD9003E5991 /* Chatting-SharingUITests */,
@@ -99,13 +128,11 @@
 		FE3FE4541F31FAD9003E5991 /* Chatting-Sharing */ = {
 			isa = PBXGroup;
 			children = (
-				FE3FE4551F31FAD9003E5991 /* AppDelegate.swift */,
-				FE3FE4571F31FAD9003E5991 /* ViewController.swift */,
-				FE3FE4591F31FAD9003E5991 /* Main.storyboard */,
+				FE3FE4AD1F3200DB003E5991 /* HypeLabs */,
+				FE3FE4991F31FC7B003E5991 /* Classes */,
+				FE3FE4A41F31FC7B003E5991 /* Resources */,
+				FE3FE4A31F31FC7B003E5991 /* Info.plist */,
 				FE3FE45F1F31FAD9003E5991 /* Assets.xcassets */,
-				FE3FE4611F31FAD9003E5991 /* LaunchScreen.storyboard */,
-				FE3FE4641F31FAD9003E5991 /* Info.plist */,
-				FE3FE45C1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodeld */,
 			);
 			path = "Chatting-Sharing";
 			sourceTree = "<group>";
@@ -128,6 +155,140 @@
 			path = "Chatting-SharingUITests";
 			sourceTree = "<group>";
 		};
+		FE3FE4991F31FC7B003E5991 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE49A1F31FC7B003E5991 /* AppDelegate */,
+				FE3FE49C1F31FC7B003E5991 /* Controllers */,
+				FE3FE49D1F31FC7B003E5991 /* Helpers */,
+				FE3FE49E1F31FC7B003E5991 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FE3FE49A1F31FC7B003E5991 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE49B1F31FC7B003E5991 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FE3FE49C1F31FC7B003E5991 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4C51F323D2E003E5991 /* WelcomeVC */,
+				FE3FE4B61F3203BC003E5991 /* ChatApplication */,
+				FE3FE4AA1F31FCC7003E5991 /* NearbyUsersVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FE3FE49D1F31FC7B003E5991 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FE3FE49E1F31FC7B003E5991 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE49F1F31FC7B003E5991 /* CoreData */,
+				FE3FE4A21F31FC7B003E5991 /* Objects */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE3FE49F1F31FC7B003E5991 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4A01F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FE3FE4A21F31FC7B003E5991 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4B91F3207F4003E5991 /* MessageItem.swift */,
+				FE3FE4BB1F320B8B003E5991 /* UserObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		FE3FE4A41F31FC7B003E5991 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4A51F31FC7B003E5991 /* Icons */,
+				FE3FE4A61F31FC7B003E5991 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE3FE4A51F31FC7B003E5991 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		FE3FE4A61F31FC7B003E5991 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		FE3FE4AA1F31FCC7003E5991 /* NearbyUsersVC */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4BE1F32186F003E5991 /* NearbyUserCell */,
+				FE3FE4AB1F31FD54003E5991 /* NearbyUsersVC.swift */,
+			);
+			name = NearbyUsersVC;
+			sourceTree = "<group>";
+		};
+		FE3FE4AD1F3200DB003E5991 /* HypeLabs */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4AE1F3200DB003E5991 /* Hype.framework */,
+			);
+			path = HypeLabs;
+			sourceTree = "<group>";
+		};
+		FE3FE4B01F3200E7003E5991 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4B41F320118003E5991 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE3FE4B61F3203BC003E5991 /* ChatApplication */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4B71F320494003E5991 /* ChatApplication.swift */,
+			);
+			name = ChatApplication;
+			sourceTree = "<group>";
+		};
+		FE3FE4BE1F32186F003E5991 /* NearbyUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */,
+			);
+			name = NearbyUserCell;
+			sourceTree = "<group>";
+		};
+		FE3FE4C51F323D2E003E5991 /* WelcomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */,
+			);
+			name = WelcomeVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +299,7 @@
 				FE3FE44E1F31FAD9003E5991 /* Sources */,
 				FE3FE44F1F31FAD9003E5991 /* Frameworks */,
 				FE3FE4501F31FAD9003E5991 /* Resources */,
+				FE3FE4B31F3200FA003E5991 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -238,9 +400,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3FE4631F31FAD9003E5991 /* LaunchScreen.storyboard in Resources */,
+				FE3FE4A91F31FC7B003E5991 /* Info.plist in Resources */,
 				FE3FE4601F31FAD9003E5991 /* Assets.xcassets in Resources */,
-				FE3FE45B1F31FAD9003E5991 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +426,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3FE4581F31FAD9003E5991 /* ViewController.swift in Sources */,
-				FE3FE4561F31FAD9003E5991 /* AppDelegate.swift in Sources */,
-				FE3FE45E1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */,
+				FE3FE4B81F320494003E5991 /* ChatApplication.swift in Sources */,
+				FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */,
+				FE3FE4BA1F3207F4003E5991 /* MessageItem.swift in Sources */,
+				FE3FE4A81F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */,
+				FE3FE4AC1F31FD54003E5991 /* NearbyUsersVC.swift in Sources */,
+				FE3FE4A71F31FC7B003E5991 /* AppDelegate.swift in Sources */,
+				FE3FE4BC1F320B8B003E5991 /* UserObject.swift in Sources */,
+				FE3FE4C71F323D52003E5991 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,25 +467,6 @@
 			targetProxy = FE3FE4751F31FAD9003E5991 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FE3FE4591F31FAD9003E5991 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE3FE45A1F31FAD9003E5991 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FE3FE4611F31FAD9003E5991 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE3FE4621F31FAD9003E5991 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FE3FE47B1F31FAD9003E5991 /* Debug */ = {
@@ -422,9 +569,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9N7TV9TN7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chatting-Sharing/HypeLabs",
+				);
 				INFOPLIST_FILE = "Chatting-Sharing/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.chatting-sharing.Chatting-Sharing";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.chatting-sharing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -435,9 +586,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9N7TV9TN7J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Chatting-Sharing/HypeLabs",
+				);
 				INFOPLIST_FILE = "Chatting-Sharing/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.chatting-sharing.Chatting-Sharing";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.chatting-sharing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -520,6 +675,7 @@
 				FE3FE47F1F31FAD9003E5991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE3FE4801F31FAD9003E5991 /* Build configuration list for PBXNativeTarget "Chatting-SharingTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +684,7 @@
 				FE3FE4821F31FAD9003E5991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE3FE4831F31FAD9003E5991 /* Build configuration list for PBXNativeTarget "Chatting-SharingUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,16 +693,17 @@
 				FE3FE4851F31FAD9003E5991 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FE3FE45C1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodeld */ = {
+		FE3FE4A01F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FE3FE45D1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodel */,
+				FE3FE4A11F31FC7B003E5991 /* Chatting_Sharing.xcdatamodel */,
 			);
-			currentVersion = FE3FE45D1F31FAD9003E5991 /* Chatting_Sharing.xcdatamodel */;
+			currentVersion = FE3FE4A11F31FC7B003E5991 /* Chatting_Sharing.xcdatamodel */;
 			path = Chatting_Sharing.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
