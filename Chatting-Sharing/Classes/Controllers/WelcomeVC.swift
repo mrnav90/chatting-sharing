@@ -13,6 +13,8 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Chatting & Sharing";
+        let eclipseView = EclipseViewAnimation(frame: CGRect(x: 80, y: 167, width: 180, height: 330))
+        self.view.addSubview(eclipseView)
         // Do any additional setup after loading the view.
     }
 

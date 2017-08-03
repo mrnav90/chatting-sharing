@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE3FE4601F31FAD9003E5991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3FE45F1F31FAD9003E5991 /* Assets.xcassets */; };
 		FE3FE46E1F31FAD9003E5991 /* Chatting_SharingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE46D1F31FAD9003E5991 /* Chatting_SharingTests.swift */; };
 		FE3FE4791F31FAD9003E5991 /* Chatting_SharingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4781F31FAD9003E5991 /* Chatting_SharingUITests.swift */; };
 		FE3FE4A71F31FC7B003E5991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE49B1F31FC7B003E5991 /* AppDelegate.swift */; };
 		FE3FE4A81F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4A01F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld */; };
-		FE3FE4A91F31FC7B003E5991 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE3FE4A31F31FC7B003E5991 /* Info.plist */; };
 		FE3FE4AC1F31FD54003E5991 /* NearbyUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4AB1F31FD54003E5991 /* NearbyUsersVC.swift */; };
 		FE3FE4B11F3200FA003E5991 /* Hype.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3FE4AE1F3200DB003E5991 /* Hype.framework */; };
 		FE3FE4B21F3200FA003E5991 /* Hype.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE3FE4AE1F3200DB003E5991 /* Hype.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -22,6 +20,7 @@
 		FE3FE4BC1F320B8B003E5991 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4BB1F320B8B003E5991 /* UserObject.swift */; };
 		FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */; };
 		FE3FE4C71F323D52003E5991 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */; };
+		FEDB00D91F32F08E0095A853 /* EclipseViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB00D81F32F08E0095A853 /* EclipseViewAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		FE3FE47A1F31FAD9003E5991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3FE49B1F31FC7B003E5991 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3FE4A11F31FC7B003E5991 /* Chatting_Sharing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chatting_Sharing.xcdatamodel; sourceTree = "<group>"; };
-		FE3FE4A31F31FC7B003E5991 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3FE4AB1F31FD54003E5991 /* NearbyUsersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyUsersVC.swift; sourceTree = "<group>"; };
 		FE3FE4AE1F3200DB003E5991 /* Hype.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Hype.framework; sourceTree = "<group>"; };
 		FE3FE4B41F320118003E5991 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -75,6 +73,8 @@
 		FE3FE4BB1F320B8B003E5991 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyUserCell.swift; sourceTree = "<group>"; };
 		FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		FEDB00D31F32C91E0095A853 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDB00D81F32F08E0095A853 /* EclipseViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EclipseViewAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 				FE3FE4AD1F3200DB003E5991 /* HypeLabs */,
 				FE3FE4991F31FC7B003E5991 /* Classes */,
 				FE3FE4A41F31FC7B003E5991 /* Resources */,
-				FE3FE4A31F31FC7B003E5991 /* Info.plist */,
+				FEDB00D31F32C91E0095A853 /* Info.plist */,
 				FE3FE45F1F31FAD9003E5991 /* Assets.xcassets */,
 			);
 			path = "Chatting-Sharing";
@@ -177,6 +177,7 @@
 		FE3FE49C1F31FC7B003E5991 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FEDB00D71F32F0410095A853 /* CustomUI */,
 				FE3FE4C51F323D2E003E5991 /* WelcomeVC */,
 				FE3FE4B61F3203BC003E5991 /* ChatApplication */,
 				FE3FE4AA1F31FCC7003E5991 /* NearbyUsersVC */,
@@ -287,6 +288,14 @@
 				FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */,
 			);
 			name = WelcomeVC;
+			sourceTree = "<group>";
+		};
+		FEDB00D71F32F0410095A853 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				FEDB00D81F32F08E0095A853 /* EclipseViewAnimation.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,8 +409,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3FE4A91F31FC7B003E5991 /* Info.plist in Resources */,
-				FE3FE4601F31FAD9003E5991 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +436,7 @@
 				FE3FE4B81F320494003E5991 /* ChatApplication.swift in Sources */,
 				FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */,
 				FE3FE4BA1F3207F4003E5991 /* MessageItem.swift in Sources */,
+				FEDB00D91F32F08E0095A853 /* EclipseViewAnimation.swift in Sources */,
 				FE3FE4A81F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */,
 				FE3FE4AC1F31FD54003E5991 /* NearbyUsersVC.swift in Sources */,
 				FE3FE4A71F31FC7B003E5991 /* AppDelegate.swift in Sources */,
