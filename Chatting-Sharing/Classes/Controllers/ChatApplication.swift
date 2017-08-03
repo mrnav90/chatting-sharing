@@ -18,7 +18,7 @@ class ChatApplication: NSObject {
     static let sharedInstance = ChatApplication()
     var delegate: ChatApplicationDelegate?
     var userName: String! = "anonymous"
-    var nearbyUsers: Array<Any>! = Array<Any>()
+    var nearbyUsers = [UserObject]()
     
     private override init() {
         super.init()
@@ -35,10 +35,6 @@ class ChatApplication: NSObject {
 
 extension ChatApplication: HYPStateObserver, HYPNetworkObserver, HYPMessageObserver {
     
-    public func hype(_ hype: HYP!, didLose instance: HYPInstance!, error: Error!) {
-        
-    }
-    
     func hypeDidStart(_ hype: HYP!) {
         print("Hype started!")
     }
@@ -52,12 +48,12 @@ extension ChatApplication: HYPStateObserver, HYPNetworkObserver, HYPMessageObser
     }
     
     func hypeDidBecomeReady(_ hype: HYP!) {
-        
+        print("Hype become ready!")
     }
     
     func hype(_ hype: HYP!, didFind instance: HYPInstance!) {
         DispatchQueue.main.async {
-            print("Found instance: \(instance.stringIdentifier)")
+            print(instance.identifier)
             let identifier = String.init(data: instance.announcement, encoding: String.Encoding.utf8)
             let userObject:UserObject = UserObject()
             userObject.identifier = identifier
@@ -67,16 +63,35 @@ extension ChatApplication: HYPStateObserver, HYPNetworkObserver, HYPMessageObser
         }
     }
     
-    func hype(_ hype: HYP!, didFailSendingMessage messageInfo: HYPMessageInfo!, to toInstance: HYPInstance!, error: Error!) {
-        
+    func hype(_ hype: HYP!, didLose instance: HYPInstance!, error: Error!) {
+        DispatchQueue.main.async {
+            let identifier = String.init(data: instance.announcement, encoding: String.Encoding.utf8)
+            for user in self.nearbyUsers {
+                if user.identifier == identifier {
+                    let idx = self.nearbyUsers.index(of: user)
+                    self.nearbyUsers.remove(at: idx!)
+                    self.delegate?.didReceivedChangeHype()
+                }
+                
+            }
+        }
     }
-
-    public func hype(_ hype: HYP!, didReceive message: HYPMessage!, from fromInstance: HYPInstance!) {
+    
+    func hype(_ hype: HYP!, didReceive message: HYPMessage!, from fromInstance: HYPInstance!) {
         let message:MessageItem = NSKeyedUnarchiver.unarchiveObject(with: message.data) as! MessageItem
         self.delegate?.didReceivedMessage(message: message)
     }
     
     func hype(_ hype: HYP!, didSendMessage messageInfo: HYPMessageInfo!, to toInstance: HYPInstance!, progress: Float, complete: Bool) {
+        
+    }
+
+    
+    func hype(_ hype: HYP!, didFailSendingMessage messageInfo: HYPMessageInfo!, to toInstance: HYPInstance!, error: Error!) {
+        
+    }
+    
+    func hype(_ hype: HYP!, didDeliverMessage messageInfo: HYPMessageInfo!, to toInstance: HYPInstance!, progress: Float, complete: Bool) {
         
     }
     

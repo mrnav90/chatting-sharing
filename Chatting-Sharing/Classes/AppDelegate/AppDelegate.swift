@@ -16,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let welcomeVC = WelcomeVC()
-        let navi = UINavigationController(rootViewController: welcomeVC)
+//        let welcomeVC = WelcomeVC()
+        let nearbyUsersVC = NearbyUsersVC()
+        let navi = UINavigationController(rootViewController: nearbyUsersVC)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()

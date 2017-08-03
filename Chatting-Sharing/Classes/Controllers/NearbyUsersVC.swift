@@ -8,6 +8,7 @@
 
 import UIKit
 import Hype
+import AvatarImageView
 
 class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
     
@@ -46,8 +47,13 @@ extension NearbyUsersVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! NearbyUserCell
-        let user = ChatApplication.sharedInstance.nearbyUsers[indexPath.row] as? UserObject
-        cell.lblUserName.text = user?.identifier
+        let user = ChatApplication.sharedInstance.nearbyUsers[indexPath.row]
+        struct avatarImageData: AvatarImageViewDataSource {
+            var name: String = "Mr Nav"
+            var bgColor = UIColor.red
+        }
+        cell.lblUserName.text = user.identifier
+        cell.avatarImageView.dataSource = avatarImageData()
         return cell
     }
     
@@ -55,7 +61,7 @@ extension NearbyUsersVC: UITableViewDataSource, UITableViewDelegate {
         return 1
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ChatApplication.sharedInstance.nearbyUsers.count
     }
     

@@ -20,19 +20,15 @@ class EclipseViewAnimation: UIView {
             let ovalLayer: CAShapeLayer! = CAShapeLayer()
             let animation = CAKeyframeAnimation(keyPath: "position")
             
-            for idx in 0...3 {
-                
-            }
-            
             
             let animation2 = CAKeyframeAnimation(keyPath: "position")
-            let nodeView = UIView(frame: CGRect(x: (ovalView.frame.size.width / 2)  - 68, y: ovalView.frame.size.height - 55, width: 24, height: 24))
-            let nodeView2 = UIView(frame: CGRect(x: (ovalView.frame.size.width / 2) - 12, y: ovalView.frame.size.height - 66, width: 24, height: 24))
-            let nodeView3 = UIView(frame: CGRect(x: (ovalView.frame.size.width / 2) - 90, y: ovalView.frame.size.height - 105, width: 24, height: 24))
+            let nodeView = UIView(frame: CGRect(x: ovalView.frame.size.width / 2, y: 0, width: 24, height: 24))
+            let nodeView2 = UIView(frame: CGRect(x: ovalView.frame.size.width / 2, y: 0, width: 24, height: 24))
             
             nodeView.backgroundColor = UIColor.green
+            nodeView.layer.cornerRadius = 12
             nodeView2.backgroundColor = UIColor.blue
-            nodeView3.backgroundColor = UIColor.red
+            nodeView2.layer.cornerRadius = 12
             
             animation.path = elipsePath.cgPath
             animation.repeatCount = Float.infinity
@@ -54,7 +50,6 @@ class EclipseViewAnimation: UIView {
             
             ovalView.addSubview(nodeView)
             ovalView.addSubview(nodeView2)
-            ovalView.addSubview(nodeView3)
             
             ovalView.backgroundColor = UIColor.clear
             ovalView.clipsToBounds = false
@@ -70,7 +65,9 @@ class EclipseViewAnimation: UIView {
             ovalView.layer.addSublayer(ovalLayer!)
             self.addSubview(ovalView)
         }
-
+    }
+    
+    func calcPerimeter() {
         
     }
     
