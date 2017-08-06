@@ -24,6 +24,7 @@
 		FE3FE4BC1F320B8B003E5991 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4BB1F320B8B003E5991 /* UserObject.swift */; };
 		FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */; };
 		FE3FE4C71F323D52003E5991 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */; };
+		FEB7690C1F3732FF008C3C8B /* BallScaleRippleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB7690B1F3732FF008C3C8B /* BallScaleRippleAnimation.swift */; };
 		FECDD6311F34C1D5009B28E0 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDD6301F34C1D5009B28E0 /* Define.swift */; };
 		FECDD6351F34C921009B28E0 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDD6341F34C921009B28E0 /* Common.swift */; };
 		FECDD6381F34F30F009B28E0 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDD6371F34F30F009B28E0 /* Loader.swift */; };
@@ -86,6 +87,7 @@
 		FE3FE4BB1F320B8B003E5991 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyUserCell.swift; sourceTree = "<group>"; };
 		FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		FEB7690B1F3732FF008C3C8B /* BallScaleRippleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallScaleRippleAnimation.swift; sourceTree = "<group>"; };
 		FECDD6301F34C1D5009B28E0 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		FECDD6341F34C921009B28E0 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FECDD6371F34F30F009B28E0 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				FEDB00D81F32F08E0095A853 /* EclipseViewAnimation.swift */,
 				FE1BBCD01F36CB5D008B8082 /* VerticalAlignLabel.swift */,
+				FEB7690B1F3732FF008C3C8B /* BallScaleRippleAnimation.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				FE1BBCD11F36CB5D008B8082 /* VerticalAlignLabel.swift in Sources */,
 				FE3FE4BA1F3207F4003E5991 /* MessageItem.swift in Sources */,
 				FEDB00D91F32F08E0095A853 /* EclipseViewAnimation.swift in Sources */,
+				FEB7690C1F3732FF008C3C8B /* BallScaleRippleAnimation.swift in Sources */,
 				FECDD6351F34C921009B28E0 /* Common.swift in Sources */,
 				FE3FE4A81F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */,
 				FE3FE4AC1F31FD54003E5991 /* NearbyUsersVC.swift in Sources */,
