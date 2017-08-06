@@ -8,7 +8,7 @@
 
 import UIKit
 import Hype
-import AvatarImageView
+import SnapKit
 
 class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
     
@@ -18,14 +18,21 @@ class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Nearby Network Users"
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
+        self.tableView = UITableView()
         self.tableView.register(NearbyUserCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.separatorInset = UIEdgeInsets.zero
+        self.tableView.separatorStyle = .none
         self.view.addSubview(self.tableView)
+        self.tableView.snp.makeConstraints { (make) in
+            make.width.height.equalToSuperview()
+            make.center.equalToSuperview()
+        }
         ChatApplication.sharedInstance.delegate = self
-        ChatApplication.sharedInstance.userName = "Mr. Nav"
+        ChatApplication.sharedInstance.userName = "Mr. Nav 91"
         ChatApplication.sharedInstance.requestHypeToStart()
+//        Loader.addLoaderToTableView(table: self.tableView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +41,9 @@ class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
     }
     
     func didReceivedChangeHype()-> Void {
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func didReceivedMessage(message: MessageItem)-> Void {
@@ -48,12 +57,16 @@ extension NearbyUsersVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! NearbyUserCell
         let user = ChatApplication.sharedInstance.nearbyUsers[indexPath.row]
-        struct avatarImageData: AvatarImageViewDataSource {
-            var name: String = "Mr Nav"
-            var bgColor = UIColor.red
+        if indexPath.row % 2 == 0 {
+            cell.containerView.backgroundColor = UIColor.white
+        } else {
+            cell.containerView.backgroundColor = Common.colorWithHexString(hex: "f7f7f7")
         }
         cell.lblUserName.text = user.identifier
-        cell.avatarImageView.dataSource = avatarImageData()
+        cell.lblLastMessage.text = "This is my description This is my description This is my description"
+        cell.lblTimeago.text = "3 hours ago"
+        cell.avatarImageView.dataSource = avatarImageData.init(text: user.identifier!)
+    
         return cell
     }
     
@@ -66,10 +79,10 @@ extension NearbyUsersVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 80
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print("OK")
     }
 }

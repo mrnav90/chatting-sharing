@@ -12,5 +12,5 @@ import Hype
 class UserObject: NSObject {
     var identifier: String?
     var timeJoin: Date?
-    var instance: HYPInstance!
+    var instance: HYPInstance?
 }

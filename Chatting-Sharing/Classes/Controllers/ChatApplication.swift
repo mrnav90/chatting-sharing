@@ -37,6 +37,7 @@ extension ChatApplication: HYPStateObserver, HYPNetworkObserver, HYPMessageObser
     
     func hypeDidStart(_ hype: HYP!) {
         print("Hype started!")
+        self.delegate?.didReceivedChangeHype()
     }
     
     func hypeDidStop(_ hype: HYP!, error: Error!) {
@@ -53,7 +54,7 @@ extension ChatApplication: HYPStateObserver, HYPNetworkObserver, HYPMessageObser
     
     func hype(_ hype: HYP!, didFind instance: HYPInstance!) {
         DispatchQueue.main.async {
-            print(instance.identifier)
+            print("Did find user")
             let identifier = String.init(data: instance.announcement, encoding: String.Encoding.utf8)
             let userObject:UserObject = UserObject()
             userObject.identifier = identifier

@@ -21,6 +21,9 @@
 		FE3FE4BC1F320B8B003E5991 /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4BB1F320B8B003E5991 /* UserObject.swift */; };
 		FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */; };
 		FE3FE4C71F323D52003E5991 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */; };
+		FECDD6311F34C1D5009B28E0 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDD6301F34C1D5009B28E0 /* Define.swift */; };
+		FECDD6351F34C921009B28E0 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDD6341F34C921009B28E0 /* Common.swift */; };
+		FECDD6381F34F30F009B28E0 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECDD6371F34F30F009B28E0 /* Loader.swift */; };
 		FEDB00D91F32F08E0095A853 /* EclipseViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDB00D81F32F08E0095A853 /* EclipseViewAnimation.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		FE3FE4BB1F320B8B003E5991 /* UserObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		FE3FE4C11F32226A003E5991 /* NearbyUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyUserCell.swift; sourceTree = "<group>"; };
 		FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		FECDD6301F34C1D5009B28E0 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		FECDD6341F34C921009B28E0 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FECDD6371F34F30F009B28E0 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		FEDB00D31F32C91E0095A853 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEDB00D81F32F08E0095A853 /* EclipseViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EclipseViewAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +209,9 @@
 		FE3FE49D1F31FC7B003E5991 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FECDD6361F34F30F009B28E0 /* Libs */,
+				FECDD6301F34C1D5009B28E0 /* Define.swift */,
+				FECDD6341F34C921009B28E0 /* Common.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -304,6 +313,14 @@
 				FE3FE4C61F323D52003E5991 /* WelcomeVC.swift */,
 			);
 			name = WelcomeVC;
+			sourceTree = "<group>";
+		};
+		FECDD6361F34F30F009B28E0 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				FECDD6371F34F30F009B28E0 /* Loader.swift */,
+			);
+			path = Libs;
 			sourceTree = "<group>";
 		};
 		FEDB00D71F32F0410095A853 /* CustomUI */ = {
@@ -456,10 +473,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Chatting-Sharing/Pods-Chatting-Sharing-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AvatarImageView/AvatarImageView.framework",
+				"${BUILT_PRODUCTS_DIR}/Skeleton/Skeleton.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AvatarImageView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Skeleton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -508,12 +529,15 @@
 			files = (
 				FE3FE4B81F320494003E5991 /* ChatApplication.swift in Sources */,
 				FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */,
+				FECDD6381F34F30F009B28E0 /* Loader.swift in Sources */,
 				FE3FE4BA1F3207F4003E5991 /* MessageItem.swift in Sources */,
 				FEDB00D91F32F08E0095A853 /* EclipseViewAnimation.swift in Sources */,
+				FECDD6351F34C921009B28E0 /* Common.swift in Sources */,
 				FE3FE4A81F31FC7B003E5991 /* Chatting_Sharing.xcdatamodeld in Sources */,
 				FE3FE4AC1F31FD54003E5991 /* NearbyUsersVC.swift in Sources */,
 				FE3FE4A71F31FC7B003E5991 /* AppDelegate.swift in Sources */,
 				FE3FE4BC1F320B8B003E5991 /* UserObject.swift in Sources */,
+				FECDD6311F34C1D5009B28E0 /* Define.swift in Sources */,
 				FE3FE4C71F323D52003E5991 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +683,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.chatting-sharing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -677,6 +702,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nav.chatting-sharing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
