@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A2D7DA9F187EA01A2E1DFD10 /* Pods_Chatting_Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC52F2AB21B6478D61E8E37 /* Pods_Chatting_Sharing.framework */; };
+		FE1BBCCF1F36CB06008B8082 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BBCCE1F36CB06008B8082 /* Date+Extension.swift */; };
+		FE1BBCD11F36CB5D008B8082 /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BBCD01F36CB5D008B8082 /* VerticalAlignLabel.swift */; };
+		FE1BBCD41F36CD8A008B8082 /* LoadingPlaceholderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BBCD31F36CD8A008B8082 /* LoadingPlaceholderCell.swift */; };
 		FE3FE46E1F31FAD9003E5991 /* Chatting_SharingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE46D1F31FAD9003E5991 /* Chatting_SharingTests.swift */; };
 		FE3FE4791F31FAD9003E5991 /* Chatting_SharingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE4781F31FAD9003E5991 /* Chatting_SharingUITests.swift */; };
 		FE3FE4A71F31FC7B003E5991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3FE49B1F31FC7B003E5991 /* AppDelegate.swift */; };
@@ -62,6 +65,9 @@
 		56DB6C30D3252B7ABE746D61 /* Pods-Chatting-Sharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting-Sharing.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatting-Sharing/Pods-Chatting-Sharing.release.xcconfig"; sourceTree = "<group>"; };
 		8BC52F2AB21B6478D61E8E37 /* Pods_Chatting_Sharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatting_Sharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7996981C8832B6F76820AE2 /* Pods-Chatting-Sharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting-Sharing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatting-Sharing/Pods-Chatting-Sharing.debug.xcconfig"; sourceTree = "<group>"; };
+		FE1BBCCE1F36CB06008B8082 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		FE1BBCD01F36CB5D008B8082 /* VerticalAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalAlignLabel.swift; sourceTree = "<group>"; };
+		FE1BBCD31F36CD8A008B8082 /* LoadingPlaceholderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingPlaceholderCell.swift; sourceTree = "<group>"; };
 		FE3FE4521F31FAD9003E5991 /* Chatting-Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chatting-Sharing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3FE45F1F31FAD9003E5991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE3FE4691F31FAD9003E5991 /* Chatting-SharingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chatting-SharingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +130,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FE1BBCCD1F36CA99008B8082 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE1BBCCE1F36CB06008B8082 /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE1BBCD21F36CCD9008B8082 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				FE1BBCD31F36CD8A008B8082 /* LoadingPlaceholderCell.swift */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
 		FE3FE4491F31FAD9003E5991 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +201,7 @@
 		FE3FE4991F31FC7B003E5991 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FE1BBCCD1F36CA99008B8082 /* Extensions */,
 				FE3FE49A1F31FC7B003E5991 /* AppDelegate */,
 				FE3FE49C1F31FC7B003E5991 /* Controllers */,
 				FE3FE49D1F31FC7B003E5991 /* Helpers */,
@@ -198,6 +221,7 @@
 		FE3FE49C1F31FC7B003E5991 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FE1BBCD21F36CCD9008B8082 /* CustomCell */,
 				FEDB00D71F32F0410095A853 /* CustomUI */,
 				FE3FE4C51F323D2E003E5991 /* WelcomeVC */,
 				FE3FE4B61F3203BC003E5991 /* ChatApplication */,
@@ -327,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				FEDB00D81F32F08E0095A853 /* EclipseViewAnimation.swift */,
+				FE1BBCD01F36CB5D008B8082 /* VerticalAlignLabel.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -528,8 +553,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE3FE4B81F320494003E5991 /* ChatApplication.swift in Sources */,
+				FE1BBCD41F36CD8A008B8082 /* LoadingPlaceholderCell.swift in Sources */,
 				FE3FE4C31F32226A003E5991 /* NearbyUserCell.swift in Sources */,
+				FE1BBCCF1F36CB06008B8082 /* Date+Extension.swift in Sources */,
 				FECDD6381F34F30F009B28E0 /* Loader.swift in Sources */,
+				FE1BBCD11F36CB5D008B8082 /* VerticalAlignLabel.swift in Sources */,
 				FE3FE4BA1F3207F4003E5991 /* MessageItem.swift in Sources */,
 				FEDB00D91F32F08E0095A853 /* EclipseViewAnimation.swift in Sources */,
 				FECDD6351F34C921009B28E0 /* Common.swift in Sources */,

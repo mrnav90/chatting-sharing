@@ -24,28 +24,34 @@ class NearbyUserCell: UITableViewCell {
         self.backgroundColor = UIColor.clear
         self.separatorInset = UIEdgeInsets.zero
         self.selectionStyle = .none
-        self.lineBottom.backgroundColor = Common.colorWithHexString(hex: "e9e9e9")
-        self.avatarImageView = AvatarImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        self.avatarImageView.configuration = avatarImageConfig()
-        self.lblUserName = UILabel()
+        self.addSubViewForCell()
+    }
+    
+    override func layoutSubviews() {
         self.lblUserName.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
         self.lblUserName.textColor = Common.colorWithHexString(hex: "5c5c5c")
-        self.lblLastMessage = VerticalAlignLabel()
+        self.lineBottom.backgroundColor = Common.colorWithHexString(hex: "e9e9e9")
         self.lblLastMessage.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
         self.lblLastMessage.textColor = Common.colorWithHexString(hex: "939393")
         self.lblLastMessage.verticalAlignment = .top
         self.lblLastMessage.numberOfLines = 2
-        self.lblTimeago = UILabel()
         self.lblTimeago.font = UIFont(name: "HelveticaNeue-Bold", size: 11)
         self.lblTimeago.textColor = Common.colorWithHexString(hex: "c2c2c2")
+        self.makeConstraints()
+    }
+
+    func addSubViewForCell() {
+        self.avatarImageView = AvatarImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        self.avatarImageView.configuration = avatarImageConfig()
+        self.lblUserName = UILabel()
+        self.lblLastMessage = VerticalAlignLabel()
+        self.lblTimeago = UILabel()
         self.containerView.addSubview(self.avatarImageView)
         self.containerView.addSubview(self.lblUserName)
         self.containerView.addSubview(self.lblLastMessage)
         self.containerView.addSubview(self.lblTimeago)
         self.containerView.addSubview(self.lineBottom)
         self.addSubview(self.containerView)
-        
-        self.makeConstraints()
     }
     
     func makeConstraints() {

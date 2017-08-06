@@ -25,14 +25,14 @@ class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
         self.tableView.separatorInset = UIEdgeInsets.zero
         self.tableView.separatorStyle = .none
         self.view.addSubview(self.tableView)
-        self.tableView.snp.makeConstraints { (make) in
-            make.width.height.equalToSuperview()
-            make.center.equalToSuperview()
-        }
         ChatApplication.sharedInstance.delegate = self
         ChatApplication.sharedInstance.userName = "Mr. Nav 91"
         ChatApplication.sharedInstance.requestHypeToStart()
-//        Loader.addLoaderToTableView(table: self.tableView)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.makeConstraints()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +49,13 @@ class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
     func didReceivedMessage(message: MessageItem)-> Void {
         
     }
+    
+    func makeConstraints() {
+        self.tableView.snp.makeConstraints { (make) in
+            make.width.height.equalToSuperview()
+            make.center.equalToSuperview()
+        }
+    }
 
 }
 
@@ -63,7 +70,7 @@ extension NearbyUsersVC: UITableViewDataSource, UITableViewDelegate {
             cell.containerView.backgroundColor = Common.colorWithHexString(hex: "f7f7f7")
         }
         cell.lblUserName.text = user.identifier
-        cell.lblLastMessage.text = "This is my description This is my description This is my description"
+        cell.lblLastMessage.text = "This is my description"
         cell.lblTimeago.text = "3 hours ago"
         cell.avatarImageView.dataSource = avatarImageData.init(text: user.identifier!)
     
