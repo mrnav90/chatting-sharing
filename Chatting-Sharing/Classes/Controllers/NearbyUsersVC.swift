@@ -13,13 +13,13 @@ import SnapKit
 class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
     
     var tableView: UITableView!
-    var cellReuseIdentifier = "LoadingPlaceholderCell"
+    var cellReuseIdentifier = "NearbyUserCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Nearby Network Users"
         self.tableView = UITableView()
-        self.tableView.register(LoadingPlaceholderCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        self.tableView.register(NearbyUserCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorInset = UIEdgeInsets.zero
@@ -42,7 +42,7 @@ class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
     
     func didReceivedChangeHype()-> Void {
         DispatchQueue.main.async {
-//            self.tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
     
@@ -60,73 +60,37 @@ class NearbyUsersVC: UIViewController, ChatApplicationDelegate {
 }
 
 extension NearbyUsersVC: UITableViewDataSource, UITableViewDelegate {
-    
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-    }
-    
-     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
-    }
-    
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: LoadingPlaceholderCell.self), for: indexPath) as! LoadingPlaceholderCell
-        
-        cell.gradientLayers.forEach { gradientLayer in
-            let baseColor = Common.colorWithHexString(hex: "dfdfdf")
-            gradientLayer.colors = [baseColor.cgColor,
-                                    baseColor.brightened(by: 0.93).cgColor,
-                                    baseColor.cgColor]
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! NearbyUserCell
+        let user = ChatApplication.sharedInstance.nearbyUsers[indexPath.row]
+        if indexPath.row % 2 == 0 {
+            cell.contentView.backgroundColor = UIColor.white
+        } else {
+            cell.contentView.backgroundColor = Common.colorWithHexString(hex: "f7f7f7")
         }
-        
+        cell.lblUserName.text = user.identifier
+        cell.lblLastMessage.text = "This is my description"
+        cell.lblTimeago.text = "3 hours ago"
+        cell.avatarImageView.dataSource = avatarImageData.init(text: user.identifier!)
+    
         return cell
     }
     
-    //MARK: - UITableViewDelegate
-    
-     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let skeletonCell = cell as! LoadingPlaceholderCell
-        skeletonCell.slide(to: .right)
+    func numberOfSectionsInTableView(in tableView: UITableView) -> Int {
+        return 1
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! NearbyUserCell
-//        let user = ChatApplication.sharedInstance.nearbyUsers[indexPath.row]
-//        if indexPath.row % 2 == 0 {
-//            cell.containerView.backgroundColor = UIColor.white
-//        } else {
-//            cell.containerView.backgroundColor = Common.colorWithHexString(hex: "f7f7f7")
-//        }
-//        cell.lblUserName.text = user.identifier
-//        cell.lblLastMessage.text = "This is my description"
-//        cell.lblTimeago.text = "3 hours ago"
-//        cell.avatarImageView.dataSource = avatarImageData.init(text: user.identifier!)
-//    
-//        return cell
-//    }
-//    
-//    func numberOfSectionsInTableView(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return ChatApplication.sharedInstance.nearbyUsers.count
-//    }
-//    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 80
-//    }
-//    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("OK")
-//    }
-}
-
-extension UIColor {
-    func brightened(by factor: CGFloat) -> UIColor {
-        var h: CGFloat = 0, s: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        getHue(&h, saturation: &s, brightness: &b, alpha: &a)
-        return UIColor(hue: h, saturation: s, brightness: b * factor, alpha: a)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ChatApplication.sharedInstance.nearbyUsers.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("OK")
     }
 }
 

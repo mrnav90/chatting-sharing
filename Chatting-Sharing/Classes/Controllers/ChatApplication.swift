@@ -37,6 +37,12 @@ extension ChatApplication: HYPStateObserver, HYPNetworkObserver, HYPMessageObser
     
     func hypeDidStart(_ hype: HYP!) {
         print("Hype started!")
+        let userObject:UserObject = UserObject()
+        let userObject2:UserObject = UserObject()
+        userObject.identifier = "ưdbwdbwbwegqegwgqegwgqwwưdbwdbwbwegqegwgqegwgqwwbwebưdbwdbwbwegqegwgqegwgqwwbwebbweb"
+        userObject2.identifier = "11111"
+        self.nearbyUsers.append(userObject)
+        self.nearbyUsers.append(userObject2)
         self.delegate?.didReceivedChangeHype()
     }
     

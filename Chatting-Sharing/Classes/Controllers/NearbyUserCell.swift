@@ -16,7 +16,6 @@ class NearbyUserCell: UITableViewCell {
     var lblLastMessage: VerticalAlignLabel!
     var lblTimeago: UILabel!
     var avatarImageView: AvatarImageView!
-    var containerView: UIView! = UIView()
     var lineBottom: UIView! = UIView()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -46,43 +45,45 @@ class NearbyUserCell: UITableViewCell {
         self.lblUserName = UILabel()
         self.lblLastMessage = VerticalAlignLabel()
         self.lblTimeago = UILabel()
-        self.containerView.addSubview(self.avatarImageView)
-        self.containerView.addSubview(self.lblUserName)
-        self.containerView.addSubview(self.lblLastMessage)
-        self.containerView.addSubview(self.lblTimeago)
-        self.containerView.addSubview(self.lineBottom)
-        self.addSubview(self.containerView)
+        self.contentView.addSubview(self.avatarImageView)
+        self.contentView.addSubview(self.lblUserName)
+        self.contentView.addSubview(self.lblLastMessage)
+        self.contentView.addSubview(self.lblTimeago)
+        self.contentView.addSubview(self.lineBottom)
     }
     
     func makeConstraints() {
-        self.containerView.snp.makeConstraints { (make) -> Void in
+        self.contentView.snp.makeConstraints { (make) -> Void in
             make.width.height.equalToSuperview()
             make.center.equalToSuperview()
-        }
-        self.lineBottom.snp.makeConstraints { (make) -> Void in
-            make.width.equalToSuperview()
-            make.height.equalTo(1)
-            make.centerX.equalToSuperview()
-            make.centerY.equalTo(79)
+            make.bottom.equalTo(self.avatarImageView).offset(15)
+            make.trailing.equalTo(self.lblUserName).offset(100)
+            make.trailing.equalTo(self.lblLastMessage).offset(100)
         }
         self.avatarImageView.snp.makeConstraints { (make) -> Void in
-            make.width.height.equalTo(50)
-            make.top.left.equalTo(self.containerView).offset(15)
+            make.width.equalTo(self.avatarImageView.snp.height).multipliedBy(1/1)
+            make.leading.top.equalToSuperview().offset(15)
         }
         self.lblUserName.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(self.containerView).offset(20)
-            make.right.equalTo(self.containerView).offset(-80)
-            make.left.equalTo(self.avatarImageView.snp.right).offset(15)
+            make.leading.equalTo(self.avatarImageView.snp.trailing).offset(15)
+            make.top.equalToSuperview().offset(15)
         }
         self.lblLastMessage.snp.makeConstraints { (make) -> Void in
+            make.leading.equalTo(self.avatarImageView.snp.trailing).offset(15)
             make.top.equalTo(self.lblUserName.snp.bottom)
-            make.left.equalTo(self.avatarImageView.snp.right).offset(15)
-            make.right.equalTo(self.containerView).offset(-80)
-            make.height.equalTo(35)
+        }
+        self.lineBottom.snp.makeConstraints { (make) -> Void in
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.height.equalTo(1)
+            make.centerY.equalTo(79)
         }
         self.lblTimeago.snp.makeConstraints { (make) -> Void in
-            make.right.equalTo(self.containerView).offset(-15)
-            make.top.equalTo(35)
+            make.top.equalTo(30)
+            make.right.equalToSuperview().offset(-10)
+            make.leading.equalTo(self.lblUserName.snp.trailing).offset(15)
+            make.leading.equalTo(self.lblLastMessage.snp.trailing).offset(15)
+            make.height.equalTo(21)
         }
     }
     
